@@ -4,32 +4,28 @@
 function displayGreeting () {
 
     // user input
-  let insertedTemperature = parseInt((document.getElementById('Inserted-Temperature-here').value));
+  let userAge = parseInt((document.getElementById('Inserted-age-here').value));
 
-    // variables
-  let dividingTemperature = 15;
   
-    // formula for hot outside
-  if (insertedTemperature >= dividingTemperature) {
-    document.getElementById("greeting").innerHTML = "Wow, it's " + insertedTemperature + "° degrees outside, it's super nice out! Might as well take a swim or something :) "
+    // Process
+    // R-RATED
+  if (userAge >= 18) {
+    document.getElementById("greeting").innerHTML = "You are " + userAge + ", which means you are allowed to see an R-rated movie alone."
   }
-    // formula for cold outside
-  if (insertedTemperature < dividingTemperature) {
-    document.getElementById("greeting").innerHTML = "Geez, it's " + insertedTemperature + "° degrees out there, stay inside! Go get some hot chocolate and warm up, watch a movie or something :)"
+  
+    // PG-14
+  else if (userAge >= 14) {
+    document.getElementById("greeting").innerHTML = "You are " + userAge + ", which means you are allowed to see a PG-14 movie alone."
   }
 
+    // PG-13
+  else if (userAge == 13) {
+    document.getElementById("greeting").innerHTML = "You are " + userAge + ", which means you are allowed to see a PG-13 movie alone."
+  }
 
-  // unused/currently testing code
-  
-      // formula for correct guess
-  //if (guessedNumber == correctNumber) {
-  //  document.getElementById("greeting").innerHTML = "Your guess was " + guessedNumber + ", and the correct number was " + correctNumber + ". You guessed correctly, good job!"
-  //}
-  
-    // formula for incorrect guess
-  //if (guessedNumber != correctNumber) {
-  //  document.getElementById("greeting").innerHTML = "Your guess was " + guessedNumber + ", and the correct number was " + correctNumber + ". You guessed incorrectly, better luck next time!"
+    // G/PG
+  else {
+    document.getElementById("greeting").innerHTML = "You are " + userAge + ", which means you are allowed to see a G/PG movie alone."
+  }
 
-  // let correctNumber = Math.floor((Math.random() * 6) + 1);
-  
 }
