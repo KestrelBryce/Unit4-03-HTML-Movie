@@ -1,4 +1,4 @@
-  /* This function compares the guessed number to the correct number. 
+  /* This function compares the user's age to current Canadian age restrictions on movies. 
 */
 
 function displayGreeting () {
