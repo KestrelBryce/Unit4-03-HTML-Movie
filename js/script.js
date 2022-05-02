@@ -24,8 +24,13 @@ function displayGreeting () {
   }
 
     // G/PG
-  else {
+  else if (userAge >= 10) {
     document.getElementById("greeting").innerHTML = "You are " + userAge + ", which means you are allowed to see a G/PG movie alone."
+  }
+
+  // No movies for you
+  else {
+    document.getElementById("greeting").innerHTML = "You are " + userAge + ", which means you are not allowed to see any movies alone."
   }
 
 }
